@@ -198,7 +198,7 @@ section.s1 {
 }
 
 .intro-section {
-  width: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -240,7 +240,7 @@ section.s1 {
 
 .img-section 
 {
-  width: 100vh;
+  width: 100%;
   display: grid;
    grid-template-columns: 1fr 1fr; /* deux colonnes */
   grid-template-rows: 1fr 1fr;    /* deux lignes */
