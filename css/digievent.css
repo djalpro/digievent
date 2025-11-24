@@ -167,6 +167,7 @@ section.s1 {
     /* removed broken background-image declaration */
     background-attachment: fixed;
     height: 100%;
+    overflow-x: hidden;
   }
   header div:first-child {
    
