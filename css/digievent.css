@@ -56,7 +56,7 @@ header div:first-child a{
   text-decoration: none;
 }
 main {
-  /* height: 100vh; */
+   height: 100%; 
   display: flex;
 }
 section.s1 {
