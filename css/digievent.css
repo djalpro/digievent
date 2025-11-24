@@ -164,7 +164,7 @@ section.s1 {
   
   }
   body{
-    background-attachment: scroll;
+    /* removed broken background-image declaration */
     background-attachment: fixed;
   }
   header div:first-child {
@@ -257,8 +257,9 @@ section.s1 {
   height: 450px;                 /* pleine hauteur*/
   gap: 10px;
   padding: 50px;
-  /* padding-left: 50px; */
+  padding-bottom: 200px;
   justify-content: space-around;
+  padding
   
   }
 .grid{
