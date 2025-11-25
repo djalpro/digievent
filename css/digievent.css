@@ -243,7 +243,7 @@ section.s1 {
 .grid-3 {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background: url(../img/grid2.png);
+  background: url(../img/grid3.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
