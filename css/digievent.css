@@ -170,16 +170,39 @@ section.s1 {
   }
 .intro-section .b1 
   {
+  background-color: transparent;
+  color: #aa5a10;
+  border: 2px solid #aa5a10;
+  position: relative;
   width: 30%;
   padding: 15px;
   font-size: 20px;
   font-weight: bold;
-  color: white;
-  background-color: #aa5a10;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  }
+  margin-left: 50px;
+}
+
+.intro-section .b1::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #aa5a10;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.intro-section .b1:hover::after {
+  width: 100%;
+}
+
+.intro-section .b1:hover {
+  color: white;
+}
+
+  
 
 .img-section {
   width: 50%;
