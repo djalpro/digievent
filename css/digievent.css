@@ -291,6 +291,90 @@ section.s1 {
   75% { transform: translate(-5px, 5px) scale(1.05); }
   100% { transform: translate(0, 0) scale(1.05); }
 }
+/* ---------------- FOOTER ---------------- */
+
+.footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 60px 40px 20px;
+  margin-top: 60px;
+  backdrop-filter: blur(3px);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Logo + description */
+.footer-logo h2 {
+  font-family: 'Climate Crisis', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.footer-logo p {
+  margin-top: 10px;
+  opacity: 0.7;
+  width: 250px;
+}
+
+/* Navigation links */
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  opacity: 1;
+  padding-left: 5px;
+}
+
+/* Social icons */
+.social-icons a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #aa5a10;
+  transform: scale(1.2);
+}
+
+/* Bottom part */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+
+
+
 
 @media screen and (min-width: 769px) {
   .nav-icon {
@@ -414,7 +498,18 @@ section.s1 {
 
 
 
+.footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .footer-logo p {
+    margin: 0 auto;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
 
 
 
