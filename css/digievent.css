@@ -254,23 +254,43 @@ header.scrolled {
   background-color: var(--accent-dark);
 }
 
-/* Bouton "Get Started" du hero : même glissement que "Our services",
-   mais c'est le fond de la page qui remplace l'orange de droite à gauche */
-.hero-actions .btn-solid {
-  background: linear-gradient(to right, var(--accent) 50%, transparent 50%);
+/* Boutons du hero : deux effets en miroir, même sens (droite vers gauche),
+   même durée, même taille.
+   - "Get Started" : orange au repos, le fond de la page arrive par la droite
+   - "Our services" : fond de la page au repos, l'orange arrive par la droite */
+.hero-actions .btn {
+  min-width: 190px;
   background-size: 200% 100%;
   background-position: left;
-  transition: background-position 0.3s ease, color 0.3s ease;
+  transition: background-position 0.35s ease, color 0.35s ease;
 }
 
-.hero-actions .btn-solid::after {
+.hero-actions .btn::after {
   display: none;
+}
+
+.hero-actions .btn:hover,
+.hero-actions .btn:focus-visible {
+  background-position: right;
+}
+
+.hero-actions .btn-solid {
+  background-image: linear-gradient(to right, var(--accent) 50%, transparent 50%);
+  background-color: transparent;
 }
 
 .hero-actions .btn-solid:hover,
 .hero-actions .btn-solid:focus-visible {
-  background-position: right;
   color: var(--accent);
+}
+
+.hero-actions .btn:not(.btn-solid) {
+  background-image: linear-gradient(to right, transparent 50%, var(--accent) 50%);
+}
+
+.hero-actions .btn:not(.btn-solid):hover,
+.hero-actions .btn:not(.btn-solid):focus-visible {
+  color: white;
 }
 
 /* ---------------- HERO ---------------- */
