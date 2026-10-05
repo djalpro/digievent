@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact DigiEvent for a free quote for your next event.">
+  <title>Contact | DigiEvent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/digievent.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">digievent</a>
+    <button class="nav-icon" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="main-nav">
+      <nav aria-label="Main navigation">
+        <a class="item" href="index.html">
+          <div data-text="Main page" class="linktext">Home</div>
+        </a>
+        <a class="item" href="about.html">
+          <div data-text="What we do" class="linktext">About</div>
+        </a>
+        <a class="item" href="services.html">
+          <div data-text="Our services" class="linktext">Services</div>
+        </a>
+        <a class="item" href="contact.html">
+          <div data-text="Get in touch" class="linktext">Contact</div>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Contact us</h1>
+      <p>A question, a project, a quote? Write to us and we will reply within 24 hours.</p>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="card reveal">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:contact@digievent.com">contact@digievent.com</a></p>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h3>Phone</h3>
+              <p>+33 1 23 45 67 89</p>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h3>Opening hours</h3>
+              <p>Mon &ndash; Fri, 9am &ndash; 6pm</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form card reveal" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <p class="error">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <p class="error">Please enter a valid email address.</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="event">Event type</label>
+              <select id="event" name="event" required>
+                <option value="">Choose&hellip;</option>
+                <option>Corporate event</option>
+                <option>Wedding / private party</option>
+                <option>Conference</option>
+                <option>Virtual / hybrid event</option>
+                <option>Other</option>
+              </select>
+              <p class="error">Please choose an event type.</p>
+            </div>
+            <div class="field">
+              <label for="date">Event date (optional)</label>
+              <input id="date" name="date" type="date">
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <p class="error">Your message must contain at least 10 characters.</p>
+          </div>
+          <button class="btn btn-solid" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>DigiEvent</h2>
+        <p>Digital event management made simple.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span class="year">2025</span> DigiEvent. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
