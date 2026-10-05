@@ -254,6 +254,16 @@ header.scrolled {
   background-color: var(--accent-dark);
 }
 
+/* Bouton "Get Started" du hero : se remplit en blanc au survol */
+.hero-actions .btn-solid::after {
+  background-color: white;
+}
+
+.hero-actions .btn-solid:hover,
+.hero-actions .btn-solid:focus-visible {
+  color: var(--accent);
+}
+
 /* ---------------- HERO ---------------- */
 
 .s1 {
