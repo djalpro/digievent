@@ -254,9 +254,13 @@ header.scrolled {
   background-color: var(--accent-dark);
 }
 
-/* Bouton "Get Started" du hero : prend la couleur du fond au survol */
+/* Bouton "Get Started" du hero : même glissement que "Our services",
+   mais c'est le fond de la page qui remplace l'orange de gauche à droite */
 .hero-actions .btn-solid {
-  transition: color 0.3s ease, background-color 0.3s ease;
+  background: linear-gradient(to right, transparent 50%, var(--accent) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: background-position 0.3s ease, color 0.3s ease;
 }
 
 .hero-actions .btn-solid::after {
@@ -265,7 +269,7 @@ header.scrolled {
 
 .hero-actions .btn-solid:hover,
 .hero-actions .btn-solid:focus-visible {
-  background-color: transparent;
+  background-position: left;
   color: var(--accent);
 }
 
