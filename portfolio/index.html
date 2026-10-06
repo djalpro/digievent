@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add("js")</script>
+<title>Abdeldjalil Soudani · Aménagement du territoire et RSE</title>
+<meta name="description" content="Portfolio d'Abdeldjalil Soudani, étudiant en Master 1 RSE à Klima School, licence en aménagement du territoire, en recherche d'alternance à Lyon.">
+<meta name="author" content="Abdeldjalil Soudani">
+<meta name="theme-color" content="#EAF0EB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14211E" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Abdeldjalil Soudani · Aménagement du territoire et RSE">
+<meta property="og:description" content="Étudiant en Master 1 RSE à Klima School, licence en aménagement du territoire. En recherche d'alternance à Lyon.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231C2B36'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23EAF0EB'%3EAS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EAF0EB; --paper-2:#DDE6E0; --ink:#1C2B36; --ink-soft:#4A5C68;
+  --contour:#5B8C78; --water:#2F6EA5; --boundary:#B23A7A; --line:#C3D0C8;
+  --card:#F6F9F6; --gold:#C08A1E;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#14211E; --paper-2:#1B2B27; --ink:#E4ECE6; --ink-soft:#A7B8AF;
+    --contour:#5FA287; --water:#6FA6D6; --boundary:#E07AB0; --line:#2C3F39; --card:#1A2925;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14211E; --paper-2:#1B2B27; --ink:#E4ECE6; --ink-soft:#A7B8AF;
+  --contour:#5FA287; --water:#6FA6D6; --boundary:#E07AB0; --line:#2C3F39; --card:#1A2925;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Familjen Grotesk","Arial Narrow",system-ui,sans-serif;line-height:1.1;margin:0;font-weight:700;letter-spacing:-0.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--boundary);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:20;background:var(--ink);color:var(--paper);padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600}
+.skip:focus{top:1rem}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+#topo{position:absolute;inset:0;width:100%;height:100%}
+#topo path{fill:none;stroke:var(--contour);stroke-width:1;opacity:.55}
+#topo path.index{stroke-width:1.8;opacity:.8}
+#topo path.river{stroke:var(--water);stroke-width:2.4;opacity:.75}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 55% 60% at 58% 50%,var(--paper) 35%,transparent 75%)}
+@media (max-width:820px){.hero::before{background:linear-gradient(180deg,transparent 0%,var(--paper) 30%,var(--paper) 85%,transparent 100%);opacity:.85}}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding-block:4rem}
+.pin{position:relative;margin-bottom:24px;width:clamp(150px,22vw,230px);aspect-ratio:1}
+.js .pin{opacity:0;transform:translateY(-40px) scale(.9)}
+.js .pin.on{animation:drop .9s cubic-bezier(.2,1.4,.4,1) forwards}
+@keyframes drop{to{opacity:1;transform:none}}
+.pin .photo{width:100%;height:100%;border-radius:50%;overflow:hidden;border:5px solid var(--card);box-shadow:0 0 0 2px var(--boundary);background:var(--paper-2);display:grid;place-items:center}
+.pin .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.pin .photo span{font-family:"Familjen Grotesk",sans-serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:700;color:var(--contour)}
+.pin::after{content:"";position:absolute;left:50%;bottom:-18px;width:2px;height:22px;background:var(--boundary);transform:translateX(-50%)}
+.pin .ring{position:absolute;left:50%;bottom:-24px;width:18px;height:8px;border-radius:50%;border:2px solid var(--boundary);transform:translateX(-50%);opacity:0}
+.pin.on .ring{animation:ping 2.4s 1s ease-out infinite}
+@keyframes ping{0%{opacity:.9;width:10px;height:4px}100%{opacity:0;width:90px;height:30px}}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:700}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .l span{display:inline-block}
+.js .hero h1 .l span{transform:translateY(110%)}
+.js .hero.go h1 .l span{animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.js .hero.go h1 .l:nth-child(2) span{animation-delay:.12s}
+@keyframes rise{to{transform:none}}
+.coord{margin:1.1rem 0 .3rem;font-size:1.15rem;color:var(--ink-soft);max-width:42ch}
+.coord.small{font-size:1rem}
+.coord strong{color:var(--ink);font-weight:600}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.typed{display:inline-block;min-height:1.6em;font-weight:600;color:var(--water);border-right:2px solid var(--water);padding-right:3px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{border-color:transparent}}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.3rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid var(--ink);transition:background .2s,color .2s,border-color .2s}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--boundary);border-color:var(--boundary)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.js .fade{opacity:0}
+.js .hero.go .fade{animation:fin .8s .5s forwards}
+.js .hero.go .fade.d2{animation-delay:.75s}
+@keyframes fin{to{opacity:1}}
+.scale{position:absolute;right:clamp(1.25rem,4vw,2.5rem);bottom:1.5rem;z-index:2;font-size:.8rem;color:var(--ink-soft);display:flex;align-items:center;gap:.5rem}
+.scale i{display:inline-block;width:80px;height:6px;border:1.5px solid var(--ink-soft);background:linear-gradient(90deg,var(--ink-soft) 50%,transparent 50%)}
+
+/* SECTIONS */
+section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--line)}
+section.last{border-bottom:0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:.6rem;margin-bottom:2.2rem;max-width:62ch}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3rem)}
+.sec-head p{margin:0;color:var(--ink-soft)}
+
+/* RECHERCHE */
+.search{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:0;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;align-self:start}
+.facts div{background:var(--card);padding:1.1rem 1.2rem}
+.facts dt{font-size:.85rem;color:var(--ink-soft)}
+.facts dd{margin:.2rem 0 0;font-weight:600;font-family:"Familjen Grotesk",sans-serif;font-size:1.2rem;line-height:1.25}
+.prio{display:grid;gap:1rem}
+.prio article{border-left:4px solid var(--contour);padding:.3rem 0 .3rem 1.1rem}
+.prio article.p2{border-color:var(--water)}
+.prio h3{font-size:1.3rem;margin-bottom:.35rem}
+.prio p{margin:0;color:var(--ink-soft)}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;padding:.15rem .6rem;border-radius:999px;background:var(--contour);color:var(--card);margin-bottom:.4rem}
+.p2 .tag{background:var(--water)}
+
+/* COMPETENCES : calques */
+.layers{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(1.25rem,3vw,2.5rem);align-items:start}
+.legend{display:grid;gap:.4rem;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem)}
+.legend p{margin:0 0 .4rem;font-size:.9rem;color:var(--ink-soft)}
+.layer-btn{display:flex;align-items:center;gap:.75rem;width:100%;text-align:left;padding:.75rem .9rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:600;cursor:pointer;transition:border-color .2s,transform .2s}
+.layer-btn:hover{transform:translateX(4px)}
+.layer-btn .sw{width:22px;height:14px;border-radius:3px;flex:none;background:var(--c);opacity:.3;transition:opacity .25s}
+.layer-btn[aria-pressed="true"]{border-color:var(--c)}
+.layer-btn[aria-pressed="true"] .sw{opacity:1}
+.board{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(1.25rem,3vw,2rem);min-height:420px;overflow:hidden}
+.board svg.grid{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.board svg.grid path{fill:none;stroke:var(--line);stroke-width:1}
+.panel{position:relative;display:none}
+.panel.show{display:block;animation:pan .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes pan{from{opacity:0;transform:translateY(12px)}}
+.panel h3{font-size:1.7rem;margin-bottom:.4rem}
+.panel > p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:60ch}
+.skill{margin-bottom:1.15rem}
+.skill .row{display:flex;justify-content:space-between;gap:1rem;font-weight:600}
+.skill .row em{font-style:normal;font-weight:500;font-size:.9rem;color:var(--ink-soft);white-space:nowrap}
+.bar{height:8px;border-radius:99px;background:var(--paper-2);margin-top:.4rem;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w);border-radius:99px;background:var(--c);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.js .bar i{width:0}
+.js .bar i.full{width:var(--w)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.chips span{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:.3rem .8rem;font-size:.92rem}
+
+/* PARCOURS */
+.tl-wrap{position:relative}
+.timeline{position:relative;list-style:none;margin:0;padding:0 0 0 2.2rem}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-wrap .trace{position:absolute;z-index:1;left:9px;top:6px;width:2px;height:0;background:var(--boundary);transition:height .2s linear}
+.timeline > li{position:relative;padding-bottom:2.2rem}
+.timeline > li:last-child{padding-bottom:0}
+.timeline > li::before{content:"";z-index:2;position:absolute;left:-2.2rem;top:.35rem;width:20px;height:20px;border-radius:50%;background:var(--paper);border:3px solid var(--line);transition:border-color .3s,background .3s}
+.timeline > li.reached::before{border-color:var(--boundary);background:var(--boundary)}
+.when{font-weight:600;color:var(--boundary);font-size:.95rem}
+.timeline h3{font-size:1.35rem;margin:.15rem 0 .1rem}
+.where{color:var(--ink-soft);margin:0 0 .5rem}
+.timeline ul{margin:.4rem 0 0;padding-left:1.1rem;color:var(--ink);max-width:68ch}
+.timeline ul li{padding:0 0 .25rem}
+
+/* APPORT */
+.bridge{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:center}
+.bridge .side{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem}
+.bridge .side h3{font-size:1.35rem;margin-bottom:.6rem}
+.bridge .side ul{margin:0;padding-left:1.1rem;color:var(--ink-soft)}
+.bridge svg{width:90px;height:90px}
+.bridge svg path{fill:none;stroke:var(--boundary);stroke-width:3;stroke-linecap:round}
+.quote{margin:2.5rem 0 0;font-family:"Familjen Grotesk",sans-serif;font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.3;max-width:34ch}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end}
+.contact h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.contact .lead{color:var(--ink-soft);max-width:40ch}
+.clist{display:grid;gap:.7rem}
+.clist a,.clist button{display:flex;justify-content:space-between;align-items:center;gap:1rem;width:100%;padding:1rem 1.2rem;border-radius:12px;border:1px solid var(--line);background:var(--card);text-decoration:none;font:inherit;color:var(--ink);cursor:pointer;text-align:left;transition:border-color .2s}
+.clist a:hover,.clist button:hover{border-color:var(--ink)}
+.clist small{color:var(--ink-soft);display:block;font-size:.85rem}
+.clist b{font-weight:600;overflow-wrap:anywhere}
+footer{padding:2rem 0;color:var(--ink-soft);font-size:.9rem}
+.theme{position:fixed;right:1rem;top:calc(env(safe-area-inset-top,0px) + 1rem);z-index:10;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;width:44px;height:44px;cursor:pointer;display:grid;place-items:center;padding:0}
+.theme svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.theme .moon{display:none}
+.is-dark .theme .sun{display:none}.is-dark .theme .moon{display:block}
+
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media print{.js .reveal,.js .fade,.js .pin,.js .hero h1 .l span{opacity:1!important;transform:none!important}.js .bar i{width:var(--w)!important}.theme,#topo{display:none}}
+@media (max-width:820px){
+  .hero-inner{grid-template-columns:1fr;text-align:left}
+  .search,.layers,.contact{grid-template-columns:minmax(0,1fr)}
+  .legend{position:static;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .legend p{grid-column:1/-1}
+  .bridge{grid-template-columns:1fr}
+  .bridge svg{justify-self:center;transform:rotate(90deg)}
+}
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .pin,.js .fade,.js .reveal{opacity:1;transform:none}
+  .js .hero h1 .l span{transform:none}
+  .js .bar i{width:var(--w)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<button class="theme" id="theme" type="button" aria-label="Passer en mode sombre"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+<header class="hero" id="top">
+  <svg id="topo" aria-hidden="true" preserveAspectRatio="xMidYMid slice"></svg>
+  <div class="wrap hero-inner">
+    <div class="pin" id="pin">
+      <div class="photo">
+        <!-- Pour ajouter une photo : déposer photo.jpg à côté de ce fichier et remplacer le <span> par <img src="photo.jpg" alt="Portrait d'Abdeldjalil Soudani"> -->
+        <span role="img" aria-label="Initiales d'Abdeldjalil Soudani">AS</span>
+      </div>
+      <div class="ring"></div>
+    </div>
+    <div>
+      <h1><span class="l"><span>Abdeldjalil</span></span> <span class="l"><span>Soudani</span></span></h1>
+      <p class="coord fade">Je relie <strong>l'aménagement du territoire</strong> et <strong>la&nbsp;RSE</strong>.<br>
+        <span class="typed" id="typed" aria-hidden="true"></span><span class="sr">Diagnostic territorial, cartographie et SIG, stratégie RSE, transition écologique, analyse de données spatiales.</span></p>
+      <p class="coord small fade d2">Master 1 Stratégie Durable et RSE QHSE à Klima School · en recherche d'alternance à Lyon</p>
+      <div class="actions fade d2">
+        <a class="btn solid" href="#contact">Me contacter</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/abdeldjalil-soudani62523032b" target="_blank" rel="noopener noreferrer">Voir mon LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="scale" aria-hidden="true"><i></i> Lyon, 45°45′ N</div>
+</header>
+
+<main id="main">
+<section id="recherche">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Ce que je cherche</h2>
+      <p>Une alternance pour la rentrée, dans une structure qui travaille sur le territoire, le climat ou la transition des organisations.</p>
+    </div>
+    <div class="search">
+      <dl class="facts reveal">
+        <div><dt>Contrat</dt><dd>Alternance</dd></div>
+        <div><dt>Rythme</dt><dd>1 jour école, 4 jours entreprise</dd></div>
+        <div><dt>Localisation</dt><dd>Lyon et région lyonnaise, ouvert à l'Île-de-France</dd></div>
+        <div><dt>Disponibilité</dt><dd>Dès que possible</dd></div>
+      </dl>
+      <div class="prio">
+        <article class="reveal">
+          <span class="tag">Priorité 1</span>
+          <h3>Urbanisme, aménagement et SIG</h3>
+          <p>Chargé d'études urbanisme, chargé de mission aménagement ou développement territorial, assistant chef de projet, technicien SIG et cartographie. Agences d'urbanisme, bureaux d'études, aménageurs, collectivités.</p>
+        </article>
+        <article class="p2 reveal">
+          <span class="tag">Priorité 2</span>
+          <h3>RSE, développement durable et QHSE</h3>
+          <p>Chargé de mission RSE ou transition écologique, assistant RSE, QSE ou QHSE : suivi d'indicateurs, reporting extra-financier, conformité, labellisation. Entreprises de tous secteurs, cabinets de conseil, collectivités.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competences">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Mes compétences, calque par calque</h2>
+      <p>Comme sur une carte SIG : activez un calque pour afficher le détail. Les niveaux indiqués sont honnêtes, certains sont en cours de consolidation.</p>
+    </div>
+    <div class="layers">
+      <div class="legend" role="group" aria-label="Calques de compétences">
+        <p>Légende</p>
+        <button type="button" class="layer-btn" data-layer="territoire" style="--c:var(--contour)" aria-pressed="true" aria-controls="p-territoire"><span class="sw"></span>Territoire</button>
+        <button type="button" class="layer-btn" data-layer="sig" style="--c:var(--water)" aria-pressed="false" aria-controls="p-sig"><span class="sw"></span>SIG et carto</button>
+        <button type="button" class="layer-btn" data-layer="rse" style="--c:var(--boundary)" aria-pressed="false" aria-controls="p-rse"><span class="sw"></span>RSE et QHSE</button>
+        <button type="button" class="layer-btn" data-layer="num" style="--c:var(--gold)" aria-pressed="false" aria-controls="p-num"><span class="sw"></span>Numérique</button>
+        <button type="button" class="layer-btn" data-layer="perso" style="--c:var(--ink-soft)" aria-pressed="false" aria-controls="p-perso"><span class="sw"></span>Langues et savoir-être</button>
+      </div>
+      <div class="board" aria-live="polite">
+        <svg class="grid" aria-hidden="true"><defs><pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>
+
+        <div class="panel show" id="p-territoire" style="--c:var(--contour)">
+          <h3>Urbanisme et territoire</h3>
+          <p>Ma base : trois ans de licence en aménagement du territoire et un stage de technicien en aménagement.</p>
+          <div class="skill"><div class="row">Analyse de données territoriales <em>Pratiqué en stage</em></div><div class="bar"><i style="--w:72%"></i></div></div>
+          <div class="skill"><div class="row">Diagnostic territorial et spatial <em>Pratiqué en stage</em></div><div class="bar"><i style="--w:70%"></i></div></div>
+          <div class="skill"><div class="row">Études mobilité, occupation du sol, environnement <em>Formation et stage</em></div><div class="bar"><i style="--w:64%"></i></div></div>
+          <div class="skill"><div class="row">Rapports techniques et synthèses <em>Pratiqué en stage</em></div><div class="bar"><i style="--w:66%"></i></div></div>
+          <div class="chips"><span>Urbanisme</span><span>Géographie</span><span>Politiques publiques</span><span>Études d'impact</span><span>Sobriété foncière</span></div>
+        </div>
+
+        <div class="panel" id="p-sig" style="--c:var(--water)">
+          <h3>SIG et cartographie</h3>
+          <p>Des notions solides acquises à l'université et en stage, que je consolide activement.</p>
+          <div class="skill"><div class="row">QGIS <em>Notions, en consolidation</em></div><div class="bar"><i style="--w:42%"></i></div></div>
+          <div class="skill"><div class="row">ArcGIS <em>Notions, en consolidation</em></div><div class="bar"><i style="--w:36%"></i></div></div>
+          <div class="skill"><div class="row">Cartographie thématique <em>Pratiqué en stage</em></div><div class="bar"><i style="--w:58%"></i></div></div>
+          <div class="chips"><span>Analyses spatiales</span><span>Géotraitements</span><span>Cartes thématiques</span></div>
+        </div>
+
+        <div class="panel" id="p-rse" style="--c:var(--boundary)">
+          <h3>RSE, développement durable et QHSE</h3>
+          <p>En cours d'acquisition en Master 1 à Klima School, avec un goût déjà concret pour la rigueur du suivi de données.</p>
+          <div class="skill"><div class="row">Stratégie RSE et changement climatique <em>En formation</em></div><div class="bar"><i style="--w:40%"></i></div></div>
+          <div class="skill"><div class="row">Finance durable, management de la transition <em>En formation</em></div><div class="bar"><i style="--w:32%"></i></div></div>
+          <div class="skill"><div class="row">Traçabilité et suivi de données <em>Pratiqué chez Cainiao</em></div><div class="bar"><i style="--w:62%"></i></div></div>
+          <div class="chips"><span>Indicateurs</span><span>Reporting extra-financier</span><span>Conformité</span><span>QHSE</span></div>
+        </div>
+
+        <div class="panel" id="p-num" style="--c:var(--gold)">
+          <h3>Numérique</h3>
+          <p>J'ai conçu seul un site vitrine pour un restaurant, de la maquette Figma à la mise en ligne.</p>
+          <div class="skill"><div class="row">HTML et CSS <em>Projet réalisé</em></div><div class="bar"><i style="--w:62%"></i></div></div>
+          <div class="skill"><div class="row">JavaScript <em>Projet réalisé</em></div><div class="bar"><i style="--w:45%"></i></div></div>
+          <div class="skill"><div class="row">Figma <em>Projet réalisé</em></div><div class="bar"><i style="--w:50%"></i></div></div>
+          <div class="chips"><span>Responsive</span><span>Optimisation des images</span><span>Tests multi-navigateurs</span></div>
+        </div>
+
+        <div class="panel" id="p-perso" style="--c:var(--ink-soft)">
+          <h3>Langues et savoir-être</h3>
+          <p>Habitué au travail en équipe pluridisciplinaire, avec des urbanistes, des ingénieurs et des géographes.</p>
+          <div class="skill"><div class="row">Français <em>Bilingue</em></div><div class="bar"><i style="--w:100%"></i></div></div>
+          <div class="skill"><div class="row">Arabe <em>Bilingue</em></div><div class="bar"><i style="--w:100%"></i></div></div>
+          <div class="skill"><div class="row">Anglais <em>Courant</em></div><div class="bar"><i style="--w:72%"></i></div></div>
+          <div class="chips"><span>Rigueur</span><span>Autonomie</span><span>Organisation</span><span>Apprentissage rapide</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Mon parcours</h2>
+      <p>Du bac scientifique au master RSE, en passant par le terrain.</p>
+    </div>
+    <div class="tl-wrap"><span class="trace" id="trace" aria-hidden="true"></span>
+    <ol class="timeline" id="timeline">
+      <li>
+        <div class="when">2026 – 2027 · en cours</div>
+        <h3>Master 1 Stratégie Durable des Entreprises et RSE QHSE</h3>
+        <p class="where">Klima School</p>
+        <ul><li>Stratégie RSE, changement climatique, finance durable, management de la transition</li></ul>
+      </li>
+      <li>
+        <div class="when">2025 – 2026</div>
+        <h3>Agent de logistique</h3>
+        <p class="where">Cainiao</p>
+        <ul>
+          <li>Supervision des machines de scan pour la continuité des opérations</li>
+          <li>Suivi, contrôle et mise à jour des stocks, traçabilité des produits</li>
+          <li>Respect des flux logistiques et des délais</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">2025</div>
+        <h3>Technicien en aménagement territorial, stage</h3>
+        <ul>
+          <li>Analyse et traitement de données territoriales</li>
+          <li>Cartes thématiques et diagnostics spatiaux</li>
+          <li>Études mobilité, occupation du sol, environnement, infrastructures</li>
+          <li>Rapports techniques et présentations, en équipe pluridisciplinaire</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">2024</div>
+        <h3>Projet personnel : site vitrine pour un restaurant</h3>
+        <ul>
+          <li>Site responsive en HTML, CSS et JavaScript, menu interactif</li>
+          <li>Maquette Figma, optimisation du chargement, tests multi-navigateurs</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">2022 – 2025</div>
+        <h3>Licence en aménagement du territoire</h3>
+        <p class="where">USTHB, Algérie</p>
+        <ul>
+          <li>Urbanisme, géographie, environnement, mobilité, politiques publiques</li>
+          <li>Analyse territoriale, diagnostic urbain, études d'impact, SIG</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">2021 – 2022</div>
+        <h3>Baccalauréat scientifique</h3>
+        <ul><li>Mathématiques, physique, sciences naturelles</li></ul>
+      </li>
+    </ol></div>
+  </div>
+</section>
+
+<section id="apport">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Ce que j'apporte</h2>
+      <p>Un profil à la croisée de deux mondes qui se parlent de plus en plus.</p>
+    </div>
+    <div class="bridge reveal">
+      <div class="side">
+        <h3>Le territoire</h3>
+        <ul><li>Lire un site et son contexte</li><li>Croiser des données spatiales</li><li>Produire des cartes et des diagnostics</li></ul>
+      </div>
+      <svg viewBox="0 0 90 90" aria-hidden="true"><path d="M8 60 C 25 15, 65 15, 82 60"/><path d="M8 60 V75 M82 60 V75 M30 33 V75 M60 33 V75"/></svg>
+      <div class="side">
+        <h3>La RSE</h3>
+        <ul><li>Sobriété foncière et gestion de l'eau</li><li>Mobilité et impact local</li><li>Suivi rigoureux des indicateurs</li></ul>
+      </div>
+    </div>
+    <p class="quote reveal">Rigoureux et autonome, sur le terrain comme sur les données, je veux monter vite en compétences au sein de votre équipe.</p>
+  </div>
+</section>
+
+<section id="contact" class="last">
+  <div class="wrap contact">
+    <div class="reveal">
+      <h2>Parlons de votre alternance</h2>
+      <p class="lead">CV et lettre de motivation disponibles sur demande. Je réponds rapidement.</p>
+    </div>
+    <div class="clist reveal">
+      <a href="mailto:soudaniabdeldjalil15@gmail.com"><span><small>E-mail</small><b>soudaniabdeldjalil15@gmail.com</b></span><span aria-hidden="true">✉</span></a>
+      <a href="tel:+33605628955"><span><small>Téléphone</small><b>06 05 62 89 55</b></span><span aria-hidden="true">☏</span></a>
+      <a href="https://www.linkedin.com/in/abdeldjalil-soudani62523032b" target="_blank" rel="noopener noreferrer"><span><small>LinkedIn</small><b>abdeldjalil-soudani</b></span><span aria-hidden="true">in</span></a>
+      <button id="copy" type="button"><span><small>Copier mon e-mail</small><b id="copyTxt" aria-live="polite">Cliquer pour copier</b></span><span aria-hidden="true">⧉</span></button>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© <span id="year">2026</span> Abdeldjalil Soudani · Lyon, France</div></footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+  var EMAIL = 'soudaniabdeldjalil15@gmail.com';
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* Thème */
+  var root=document.documentElement;
+  var tb=document.getElementById('theme'), mq=window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){var a=root.getAttribute('data-theme'); return a?a==='dark':mq.matches;}
+  function sync(){var d=isDark(); root.classList.toggle('is-dark',d); tb.setAttribute('aria-label',d?'Passer en mode clair':'Passer en mode sombre');}
+  try{var t=localStorage.getItem('theme'); if(t==='dark'||t==='light') root.setAttribute('data-theme',t);}catch(e){}
+  sync();
+  if(mq.addEventListener) mq.addEventListener('change',sync); else if(mq.addListener) mq.addListener(sync);
+  tb.addEventListener('click',function(){
+    var n=isDark()?'light':'dark'; root.setAttribute('data-theme',n); sync();
+    try{localStorage.setItem('theme',n);}catch(e){}
+  });
+
+  /* Courbes de niveau */
+  var svg=document.getElementById('topo'), NS='http://www.w3.org/2000/svg';
+  var W=1400,H=820; svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  var hills=[{x:1080,y:300,n:13,s:26,ph:0.4},{x:300,y:690,n:9,s:28,ph:1.7},{x:1300,y:760,n:7,s:30,ph:2.9},{x:120,y:90,n:6,s:30,ph:4.1}];
+  var rings=[];
+  hills.forEach(function(h){
+    for(var i=1;i<=h.n;i++){
+      var p=document.createElementNS(NS,'path');
+      if(i%4===0) p.setAttribute('class','index');
+      svg.appendChild(p); rings.push({el:p,h:h,r:i*h.s,i:i});
+    }
+  });
+  var river=document.createElementNS(NS,'path'); river.setAttribute('class','river'); svg.appendChild(river);
+  function ringPath(o,t){
+    var d='',N=96,h=o.h;
+    for(var k=0;k<=N;k++){
+      var a=k/N*Math.PI*2;
+      var r=o.r*(1+0.17*Math.sin(3*a+h.ph+t*0.6+o.i*0.08)+0.09*Math.sin(5*a-h.ph*2+t*0.4)+0.05*Math.sin(2*a+o.i*0.3));
+      d+=(k?'L':'M')+(h.x+Math.cos(a)*r*1.25).toFixed(1)+' '+(h.y+Math.sin(a)*r).toFixed(1);
+    }
+    return d+'Z';
+  }
+  function riverPath(t){
+    var d='';
+    for(var x=-20;x<=W+20;x+=20){
+      var y=470+Math.sin(x/170+t*0.3)*55+Math.sin(x/63)*14;
+      d+=(x<=-20?'M':'L')+x+' '+y.toFixed(1);
+    }
+    return d;
+  }
+  function draw(t){ rings.forEach(function(o){o.el.setAttribute('d',ringPath(o,t));}); river.setAttribute('d',riverPath(t)); }
+  draw(0);
+  if(!reduce){
+    var all=rings.map(function(o){return o.el;}).concat([river]);
+    all.forEach(function(p,j){
+      var L=p.getTotalLength(); p.style.strokeDasharray=L; p.style.strokeDashoffset=L;
+      p.style.transition='stroke-dashoffset 2.2s cubic-bezier(.4,.1,.2,1) '+(j*0.035)+'s';
+    });
+    requestAnimationFrame(function(){requestAnimationFrame(function(){all.forEach(function(p){p.style.strokeDashoffset=0;});});});
+    setTimeout(function(){
+      all.forEach(function(p){p.style.transition='';p.style.strokeDasharray='';p.style.strokeDashoffset='';});
+      var t0=performance.now(), visible=true, last=0;
+      if(hasIO) new IntersectionObserver(function(e){visible=e[0].isIntersecting;}).observe(svg);
+      (function loop(now){ if(visible && !document.hidden && now-last>33){ last=now; draw((now-t0)/1000*0.35); } requestAnimationFrame(loop); })(t0);
+    },4000);
+  }
+
+  /* Entrée du hero */
+  var hero=document.getElementById('top'), pin=document.getElementById('pin');
+  setTimeout(function(){hero.classList.add('go'); pin.classList.add('on');}, reduce?0:500);
+
+  /* Texte qui s'écrit */
+  var words=['Diagnostic territorial','Cartographie et SIG','Stratégie RSE','Transition écologique','Analyse de données spatiales'];
+  var el=document.getElementById('typed');
+  if(reduce){ el.textContent=words.join(' · '); el.style.border='0'; }
+  else{
+    var wi=0,ci=0,del=false;
+    (function type(){
+      var w=words[wi];
+      el.textContent=w.slice(0,ci);
+      if(!del && ci<w.length){ci++; setTimeout(type,70);}
+      else if(!del){del=true; setTimeout(type,1600);}
+      else if(ci>0){ci--; setTimeout(type,35);}
+      else{del=false; wi=(wi+1)%words.length; setTimeout(type,300);}
+    })();
+  }
+
+  /* Calques de compétences */
+  var btns=document.querySelectorAll('.layer-btn');
+  var panels=document.querySelectorAll('.panel');
+  function fill(panel){
+    var bars=panel.querySelectorAll('.bar i');
+    bars.forEach(function(b){b.classList.remove('full');});
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      bars.forEach(function(b){b.classList.add('full');});
+    });});
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      panels.forEach(function(p){p.classList.remove('show');});
+      var p=document.getElementById('p-'+b.dataset.layer); p.classList.add('show'); fill(p);
+    });
+  });
+  var board=document.querySelector('.board');
+  if(hasIO){
+    var bo=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ fill(document.querySelector('.panel.show')); bo.disconnect(); } },{threshold:.3});
+    bo.observe(board);
+  } else fill(document.querySelector('.panel.show'));
+
+  /* Apparitions */
+  var reveals=document.querySelectorAll('.reveal');
+  if(hasIO && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}});},{threshold:0,rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(r){io.observe(r);});
+  } else reveals.forEach(function(r){r.classList.add('in');});
+
+  /* Tracé de la frise au défilement */
+  var tl=document.getElementById('timeline'), tr=document.getElementById('trace'), items=tl.children;
+  var ticking=false;
+  function update(){
+    ticking=false;
+    var r=tl.getBoundingClientRect(), mid=window.innerHeight*0.6;
+    var h=Math.max(0,Math.min(r.height-12,mid-r.top));
+    tr.style.height=h+'px';
+    for(var i=0;i<items.length;i++){ items[i].classList.toggle('reached', items[i].offsetTop+10 <= h); }
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  update();
+
+  /* Copier l'e-mail */
+  var copyTxt=document.getElementById('copyTxt');
+  function showEmail(){copyTxt.textContent=EMAIL;}
+  document.getElementById('copy').addEventListener('click',function(){
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(EMAIL).then(function(){
+        copyTxt.textContent='E-mail copié';
+        setTimeout(function(){copyTxt.textContent='Cliquer pour copier';},2500);
+      },showEmail);
+    } else showEmail();
+  });
+})();
+</script>
+</body>
+</html>
