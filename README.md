@@ -6,6 +6,8 @@ Static site in pure HTML / CSS / JavaScript, no dependencies to install.
 
 **Live site:** https://djalpro.github.io/digievent/ (GitHub Pages)
 
+**Portfolio d'Abdeldjalil Soudani :** https://djalpro.github.io/digievent/portfolio/ (dossier `portfolio/`)
+
 ## Pages
 
 | Page | Content |
