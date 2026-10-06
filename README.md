@@ -4,6 +4,8 @@ Showcase website for **DigiEvent**, a digital event management agency (corporate
 
 Static site in pure HTML / CSS / JavaScript, no dependencies to install.
 
+**Live site:** https://djalpro.github.io/digievent/ (GitHub Pages)
+
 ## Pages
 
 | Page | Content |
