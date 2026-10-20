@@ -228,10 +228,10 @@ footer{padding:2rem 0;color:var(--ink-soft);font-size:.9rem}
         <span class="typed" id="typed" aria-hidden="true"></span><span class="sr">Stratégie RSE, transition écologique, suivi d'indicateurs, diagnostic territorial, cartographie et SIG.</span></p>
       <p class="coord small fade d2">23 ans · Master 1 Stratégie Durable des Entreprises et RSE QHSE à Klima School · en recherche d'alternance RSE, transition écologique ou aménagement</p>
       <div class="actions fade d2">
-        <a class="btn solid" href="#contact">Me contacter</a>
-        <a class="btn ghost" href="#video">Ma vidéo (1 min)</a>
-        <a class="btn ghost" href="cv-abdeldjalil-soudani.pdf" download="CV-Abdeldjalil-Soudani.pdf">Télécharger mon CV</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/abdeldjalil-soudani-62523032b/" target="_blank" rel="noopener noreferrer">Voir mon LinkedIn</a>
+        <a class="btn solid" href="#contact" data-track="bouton-contact-haut">Me contacter</a>
+        <a class="btn ghost" href="#video" data-track="bouton-video-haut">Ma vidéo (1 min)</a>
+        <a class="btn ghost" href="cv-abdeldjalil-soudani.pdf" download="CV-Abdeldjalil-Soudani.pdf" data-track="cv-telechargement-haut">Télécharger mon CV</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/abdeldjalil-soudani-62523032b/" target="_blank" rel="noopener noreferrer" data-track="linkedin-haut">Voir mon LinkedIn</a>
       </div>
     </div>
   </div>
@@ -444,16 +444,16 @@ footer{padding:2rem 0;color:var(--ink-soft);font-size:.9rem}
       <p class="lead">Mon CV est téléchargeable ci-contre, ma lettre de motivation est disponible sur demande. Je réponds rapidement.</p>
     </div>
     <div class="clist reveal">
-      <a href="mailto:soudaniabdeldjalil15@gmail.com"><span><small>E-mail</small><b>soudaniabdeldjalil15@gmail.com</b></span><span aria-hidden="true">✉</span></a>
-      <a href="tel:+33605628955"><span><small>Téléphone</small><b>06 05 62 89 55</b></span><span aria-hidden="true">☏</span></a>
-      <a href="https://www.linkedin.com/in/abdeldjalil-soudani-62523032b/" target="_blank" rel="noopener noreferrer"><span><small>LinkedIn</small><b>abdeldjalil-soudani</b></span><span aria-hidden="true">in</span></a>
-      <a href="cv-abdeldjalil-soudani.pdf" download="CV-Abdeldjalil-Soudani.pdf"><span><small>CV (PDF)</small><b>Télécharger mon CV</b></span><span aria-hidden="true">↓</span></a>
-      <button id="copy" type="button"><span><small>Copier mon e-mail</small><b id="copyTxt" aria-live="polite">Cliquer pour copier</b></span><span aria-hidden="true">⧉</span></button>
+      <a href="mailto:soudaniabdeldjalil15@gmail.com" data-track="contact-email"><span><small>E-mail</small><b>soudaniabdeldjalil15@gmail.com</b></span><span aria-hidden="true">✉</span></a>
+      <a href="tel:+33605628955" data-track="contact-telephone"><span><small>Téléphone</small><b>06 05 62 89 55</b></span><span aria-hidden="true">☏</span></a>
+      <a href="https://www.linkedin.com/in/abdeldjalil-soudani-62523032b/" target="_blank" rel="noopener noreferrer" data-track="linkedin-contact"><span><small>LinkedIn</small><b>abdeldjalil-soudani</b></span><span aria-hidden="true">in</span></a>
+      <a href="cv-abdeldjalil-soudani.pdf" download="CV-Abdeldjalil-Soudani.pdf" data-track="cv-telechargement-contact"><span><small>CV (PDF)</small><b>Télécharger mon CV</b></span><span aria-hidden="true">↓</span></a>
+      <button id="copy" type="button" data-track="contact-copie-email"><span><small>Copier mon e-mail</small><b id="copyTxt" aria-live="polite">Cliquer pour copier</b></span><span aria-hidden="true">⧉</span></button>
     </div>
   </div>
 </section>
 </main>
-<footer><div class="wrap">© <span id="year">2026</span> Abdeldjalil Soudani · Lyon, France</div></footer>
+<footer><div class="wrap">© <span id="year">2026</span> Abdeldjalil Soudani · Lyon, France · Mesure d'audience anonyme, sans cookie</div></footer>
 
 <script>
 (function(){
@@ -599,6 +599,50 @@ footer{padding:2rem 0;color:var(--ink-soft);font-size:.9rem}
       },showEmail);
     } else showEmail();
   });
+})();
+</script>
+
+<script>
+/* Statistiques privées (GoatCounter) : visites, clics, téléchargements du CV, lecture de la vidéo.
+   Tableau de bord : https://<code>.goatcounter.com, accessible uniquement avec ton compte.
+   Pour ne pas compter tes propres visites : ouvrir une fois la page avec #toggle-goatcounter à la fin de l'adresse. */
+(function(){
+  var GOATCOUNTER = '';  /* ← mettre ici le code choisi à l'inscription, par exemple 'abdeldjalil' */
+  if(!GOATCOUNTER) return;
+
+  var s=document.createElement('script');
+  s.async=true; s.src='https://gc.zgo.at/count.js';
+  s.setAttribute('data-goatcounter','https://'+GOATCOUNTER+'.goatcounter.com/count');
+  document.head.appendChild(s);
+
+  function track(name,title){
+    if(window.goatcounter && window.goatcounter.count) window.goatcounter.count({path:name,title:title||name,event:true});
+  }
+
+  /* Clics sur les boutons et liens marqués data-track */
+  document.addEventListener('click',function(e){
+    var el=e.target.closest && e.target.closest('[data-track]');
+    if(el) track(el.getAttribute('data-track'),el.textContent.replace(/\s+/g,' ').trim());
+    var layer=e.target.closest && e.target.closest('.layer-btn');
+    if(layer) track('calque-'+layer.getAttribute('data-layer'),'Calque de compétences : '+layer.textContent.trim());
+  });
+
+  /* Vidéo : lancement, moitié, fin (une fois par visite) */
+  var v=document.querySelector('#video video'), seen={};
+  function once(k,t){ if(!seen[k]){ seen[k]=1; track(k,t); } }
+  if(v){
+    v.addEventListener('play',function(){ once('video-lecture','Vidéo lancée'); });
+    v.addEventListener('timeupdate',function(){ if(v.duration && v.currentTime/v.duration>=0.5) once('video-moitie','Vidéo regardée à 50 %'); });
+    v.addEventListener('ended',function(){ once('video-fin','Vidéo regardée jusqu\'au bout'); });
+  }
+
+  /* Jusqu'où les visiteurs descendent dans la page */
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){ so.unobserve(e.target); track('section-'+e.target.id,'Section vue : '+(e.target.querySelector('h2')||{}).textContent); }
+    });},{threshold:.35});
+    ['video','recherche','competences','parcours','apport','contact'].forEach(function(id){var el=document.getElementById(id); if(el) so.observe(el);});
+  }
 })();
 </script>
 </body>
