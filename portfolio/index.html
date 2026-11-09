@@ -107,6 +107,22 @@ section.last{border-bottom:0}
 .player video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
 @media (max-width:820px){.video{grid-template-columns:minmax(0,1fr)}}
 
+/* PROJETS */
+.project{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.project figure{margin:0;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.project figure img{display:block;width:100%;height:auto;margin:auto 0;padding:.75rem}
+.project figcaption{font-size:.85rem;color:var(--ink-soft);background:var(--card);padding:.6rem 1rem;border-top:1px solid var(--line)}
+.project .body{padding:clamp(1.25rem,3vw,2rem);display:flex;flex-direction:column;gap:1rem}
+.project .kicker{font-weight:600;color:var(--boundary);font-size:.95rem}
+.project h3{font-size:clamp(1.4rem,2.6vw,1.8rem)}
+.project p{margin:0;color:var(--ink-soft)}
+.project ul{margin:0;padding-left:1.1rem}
+.project ul li{padding-bottom:.25rem}
+.project .chips{margin-top:0}
+.project .actions{margin-top:.2rem}
+.project .note{font-size:.88rem}
+@media (max-width:820px){.project{grid-template-columns:minmax(0,1fr)}.project figure{border-right:0;border-bottom:1px solid var(--line)}}
+
 /* RECHERCHE */
 .search{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:0;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;align-self:start}
@@ -416,6 +432,38 @@ footer{padding:2rem 0;color:var(--ink-soft);font-size:.9rem}
   </div>
 </section>
 
+<section id="projets">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Projets et réalisations</h2>
+      <p>Des travaux concrets, menés sur le terrain et en équipe. Chaque dossier s'ouvre dans le navigateur ou se télécharge en PDF.</p>
+    </div>
+    <article class="project reveal">
+      <figure>
+        <img src="projet-djelfa-carte.jpg" width="1000" height="730" loading="lazy" alt="Carte de situation et de découpage administratif de la wilaya de Djelfa, réalisée sous ArcGIS">
+        <figcaption>Carte de situation de la wilaya de Djelfa, réalisée sous ArcGIS</figcaption>
+      </figure>
+      <div class="body">
+        <span class="kicker">Avril 2025 · Stage de terrain · USTHB</span>
+        <h3>Rapport de stage en aménagement du territoire : wilaya de Djelfa</h3>
+        <p>Une semaine sur le terrain, en équipe de six étudiants, pour comprendre comment concilier développement agricole, environnement et tourisme dans un territoire steppique.</p>
+        <ul>
+          <li>Diagnostic territorial de la wilaya de Djelfa : relief, climat, population, agriculture, tourisme</li>
+          <li>Analyse du projet de ville nouvelle durable de Boughezoul</li>
+          <li>Enquête de terrain sur le POS 27 de Berbih : équipements, mobilité, activités, avec propositions</li>
+          <li>Lutte contre la désertification avec le Haut-Commissariat au Développement de la Steppe</li>
+        </ul>
+        <div class="chips"><span>Diagnostic territorial</span><span>ArcGIS</span><span>Enquête de terrain</span><span>Développement durable</span><span>Travail en équipe</span></div>
+        <div class="actions">
+          <a class="btn solid" href="rapport-stage-djelfa-2025.pdf" target="_blank" rel="noopener" data-track="rapport-djelfa-ouverture">Ouvrir le rapport</a>
+          <a class="btn ghost" href="rapport-stage-djelfa-2025.pdf" download="Rapport-stage-Djelfa-2025-Soudani.pdf" data-track="rapport-djelfa-telechargement">Télécharger le PDF</a>
+        </div>
+        <p class="note">PDF · 45 pages · 5,7 Mo</p>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section id="apport">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -641,7 +689,7 @@ footer{padding:2rem 0;color:var(--ink-soft);font-size:.9rem}
     var so=new IntersectionObserver(function(es){es.forEach(function(e){
       if(e.isIntersecting){ so.unobserve(e.target); track('section-'+e.target.id,'Section vue : '+(e.target.querySelector('h2')||{}).textContent); }
     });},{threshold:.35});
-    ['video','recherche','competences','parcours','apport','contact'].forEach(function(id){var el=document.getElementById(id); if(el) so.observe(el);});
+    ['video','recherche','competences','parcours','projets','apport','contact'].forEach(function(id){var el=document.getElementById(id); if(el) so.observe(el);});
   }
 })();
 </script>
